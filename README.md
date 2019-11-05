@@ -2,6 +2,8 @@
 * name zhh ywy hqw yjj
 * time 2019,10,31
 
+创建分支
+git branch xxx
 ## Project setup
 ```
 npm install
