@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <router-view></router-view>
 
+
+     <lnav></lnav>
   </div>
 </template>
 
 <script>
+import lnav from './components/left-nav'
 
 
 export default {
   name: 'app',
   components: {
+    lnav,
 
   }
 }
@@ -23,5 +26,29 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
 }
+html,body{
+
+  background: rgb(246, 247, 249);
+}
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li, 
+pre,
+form, fieldset, legend, button, input, textarea, 
+th, td {
+    margin: 0;
+    padding: 0;   }
+    ul,li{list-style: none;}
+a{text-decoration: none;}
+i,em{font-style:normal;}
+
+/* 重置 HTML5 元素 */
+ article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block;
+    margin: 0;
+    padding: 0;
+} 
 
 </style>
