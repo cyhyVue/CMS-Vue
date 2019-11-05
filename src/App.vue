@@ -27,6 +27,9 @@ export default {
 
 }
 html,body{
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
 
   background: rgb(246, 247, 249);
 }

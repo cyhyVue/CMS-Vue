@@ -2,7 +2,7 @@
   <div class="home">
 
       <el-container>
-  <el-aside width="150px" align="middle" >
+  <el-aside width="150px"  style=" height: 1000px;text-align:center" >
       
        <el-col style="height:70px;" :span="24"><img src="https://img.yzcdn.cn/public_files/2016/05/13/8f9c442de8666f82abaf7dd71574e997.png!60x60.jpg" alt=""></el-col>
        <el-col :span="24"><span class="tab on">概况</span></el-col>
@@ -45,8 +45,15 @@ export default {
 .el-aside{
   background: rgb(67, 67, 67);
 
+ 
+
   
 }
+span:hover{
+  
+  font-size: 18px;
+}
+
 .el-aside:first-child{
     height: 100%;
 }
