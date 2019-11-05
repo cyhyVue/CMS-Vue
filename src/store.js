@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 
 Vue.use(Vuex)
-
+//方法封装
 function fetch(api,callback){
     axios({
         methed:"GET",
