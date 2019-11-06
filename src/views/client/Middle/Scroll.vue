@@ -207,7 +207,7 @@
             <el-col :span="15">
                 <el-button type="primary">筛选</el-button>
                 <el-button type="text">重置筛选条件</el-button>
-                <scroll></scroll>
+                <!-- <scroll></scroll> -->
                  <el-button @click="show3 = !show3">收缩框</el-button>
             </el-col>
             
@@ -256,11 +256,11 @@ export default {
 .cliend_span {
         display: block;
         text-align: end;
-        font-size: 15px;
+        font-size: 14px;
     }
     .cliend_span1 {
         display: block;
         text-align: center;
-        font-size: 15px;
+        font-size: 14px;
     }
 </style>
