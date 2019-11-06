@@ -1,0 +1,28 @@
+<template>
+    <div id="app-footer">
+        <span class="logo"></span>
+    </div>
+</template>
+
+<script>
+    export default {
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+    #app-footer{
+    // position: absolute;
+    bottom: 0;
+    left: 200px;
+    right: 200px;
+    height: 40px;
+    .logo{
+        width: 76px;
+    height: 27px;
+    display: block;
+    margin: 0 auto;
+    background: url(https://img.yzcdn.cn/v2/image/www/footer/logov2.png) no-repeat;
+    }
+    }
+</style>

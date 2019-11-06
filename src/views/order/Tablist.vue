@@ -28,12 +28,13 @@
 //     //   border-bottom: 16px
 //   }
   .Tablist{
-    margin-top:16px;
+    margin:16px 0;
     border-bottom: 2px solid #e9eaec;
     // margin-bottom: 16px
   }
     .button{
         border-right: 0;
         border-radius: 1px;
+        
     }
 </style>

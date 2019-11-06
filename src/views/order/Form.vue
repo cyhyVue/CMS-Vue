@@ -15,7 +15,7 @@
     <el-input v-model="form.input" style="width:227px;padding-left:12px"></el-input>
   </el-form-item>
   <el-form-item label="活动时间">
-    <el-col :span="4.5">
+    <el-col :span="4.1">
       <el-date-picker type="date" placeholder="开始日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
     </el-col>
     <el-col class="line" :span="1">至</el-col>
