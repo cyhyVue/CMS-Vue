@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 import Home from '@/views/home/Home.vue'
 import Login from '@/views/login/Login.vue'
+import Commodity from '@/views/commodity/Commodity.vue'
 const router = new VueRouter({
     routes: [
       {
@@ -19,7 +20,12 @@ const router = new VueRouter({
       {
         path: '/login',
         component: Login
-      }
+      },
+      {
+        path: '/commodity',
+        component: Commodity
+      },
+
     ]
 })
 
