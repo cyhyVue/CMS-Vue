@@ -98,7 +98,7 @@ export default {
 .text1 {
   margin-top: 10px;
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 600;
 }
 .text2 {
   font-size: 12px;

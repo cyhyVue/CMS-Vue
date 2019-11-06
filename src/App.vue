@@ -1,24 +1,30 @@
 <template>
   <div id="app">
-  
 
+    <div v-if="$route.path === '/login'">
+     <router-view name="login"></router-view>
+
+    </div>
+  
+<div v-else>
      <lnav></lnav>
 
-     <login></login>
+</div>
+
    
   </div>
 </template>
 
 <script>
 import lnav from './components/left-nav'
-import login from "./views/login/Login"
+
 
 
 export default {
   name: 'cms',
   components: {
     lnav,
-    login
+   
 
   }
 }

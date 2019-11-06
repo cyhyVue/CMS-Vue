@@ -12,12 +12,13 @@
               <div class="imp-box">
                 <p>账号登录</p>
                 <div class="inp1">
-                  <el-input placeholder="请输入账号" v-model="input1" clearable ></el-input>
+                  <el-input placeholder="1867920000" disabled='ture' v-model="input1"  clearable ></el-input>
                 </div>
                 <div class="inp2">
                   <el-input placeholder="请输入密码" v-model="input2" show-password></el-input>
                 </div>
-                <div class="bt1"><el-button type="primary" style="width: 100%">登录</el-button></div>
+               
+                <div class="bt1"><el-button :plain="true" @click="open2" type="primary" style="width: 100%">登录</el-button></div>
                 <div class="che1">
                   <el-checkbox v-model="checked">已阅读并同意</el-checkbox><a target="_blank" rel="noopener noreferrer" href="https://www.youzan.com/intro/rule/detail?alias=14nykbyyf&amp;pageType=rules">《用户使用协议》</a>
                 </div>
@@ -46,14 +47,33 @@ export default {
       input2: "",
       checked: true
     };
+  },
+  methods: {
+     open2(){
+        this.$message({
+          showClose: true,
+          message: '登入成功',
+          type: 'success'
+        })
+        let res ={
+          token:"213455787465465465465465654654",
+          isLogin:1
+        }
+        localStorage.setItem('login',JSON.stringify(res))
+        setTimeout(()=>{
+         this.$router.replace('/home')
+      },2000)
+        }
+        
+      }
   }
-};
+
 </script>
 
 <style lang="scss" scoped>
 .login-box {
   margin: 0 auto;
-  width: 900px;
+  width:100%;
   .el-header {
     background-color: rgb(255, 255, 255);
     color: #333;
@@ -63,17 +83,19 @@ export default {
       width: 180px;
       display: inline-block;
       margin-top: 35px;
-      margin-left: -30px;
+    
     }
   }
 }
 .el-col {
-  margin-top:50px;
-  height: 500px;
+  margin-top:0px;
+  height: 550px;
   background: rgb(255, 255, 255);
   img {
     width: 380px;
-    margin-left: 40px;
+    margin-left: 15%;
+     margin-top: 7%;
+
   }
 
   .imp-box {
@@ -82,6 +104,8 @@ export default {
     height: 350px;
     background: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+    margin-left: 35%;
+     margin-top: 5%;
     > p {
       font-size: 20px;
       height: 70px;
@@ -89,6 +113,7 @@ export default {
       background: rgb(255, 255, 255);
       font-weight: 900;
       text-indent: 20px;
+
     }
     .inp1,.inp2,.bt1,.che1{
    width: 92%;
