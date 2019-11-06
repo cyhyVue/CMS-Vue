@@ -3,8 +3,6 @@
 * time 2019,11,5
 
 
-创建分支
-git branch xxx
 ## Project setup
 ```
 npm install
