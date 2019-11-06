@@ -17,6 +17,7 @@
                 </el-row>
           </div>
             <Main></Main>
+            <div class="fenge"></div>
             <Footer></Footer>
             <Bottom></Bottom>
           
@@ -88,6 +89,11 @@ export default {
   }
   .cliend_new_button {
       float: right;
-      font-size: 15px;
+      font-size: 14px;
+  }
+  .fenge {
+    width: 1008px;
+    height: 10px;
+    background: #ffffff;
   }
 </style>

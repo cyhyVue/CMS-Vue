@@ -42,7 +42,7 @@
             </el-col>
             <el-col :span="6"><div class="block">
                 <el-date-picker
-                v-model="value1"
+                v-model="value3"
                 type="date"
                 placeholder="开始日期">
                 </el-date-picker>
@@ -53,7 +53,7 @@
             </el-col>            
             <el-col :span="6"><div class="block">
                 <el-date-picker
-                v-model="value2"
+                v-model="value4"
                 type="date"
                 placeholder="结束日期">
                 </el-date-picker>
@@ -69,7 +69,7 @@
             </el-col>
             <el-col :span="6"><div class="block">
                 <el-date-picker
-                v-model="value1"
+                v-model="value5"
                 type="date"
                 placeholder="开始日期">
                 </el-date-picker>
@@ -80,7 +80,7 @@
             </el-col>            
             <el-col :span="6"><div class="block">
                 <el-date-picker
-                v-model="value2"
+                v-model="value6"
                 type="date"
                 placeholder="结束日期">
                 </el-date-picker>
@@ -148,6 +148,11 @@ export default {
         },
         value1: '',
         value2: '',
+        value3: '',
+        value4: '',
+        value5: '',
+        value6: '',
+        input: '',
       };
     }
 }
@@ -175,37 +180,37 @@ export default {
 .cliend_span1 {
     display: block;
     text-align: end;
-    font-size: 15px;
+    font-size: 14px;
     > .cliend_span11 {
         display: block;
         text-align: center;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 .cliend_span2 {
     display: block;
     text-align: end;
-    font-size: 15px;
+    font-size: 14px;
     > .cliend_span22 {
         display: block;
         text-align: center;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 .cliend_span3 {
     display: block;
     text-align: end;
-    font-size: 15px;
+    font-size: 14px;
     > .cliend_span33 {
         display: block;
         text-align: center;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 .cliend_span4 {
     display: block;
     text-align: end;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 

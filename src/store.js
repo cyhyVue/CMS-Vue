@@ -27,7 +27,9 @@ const store = new Vuex.Store({
     topArr:[],
     topArr1:[],
     glArr:[],
-    adArr:[]
+    adArr:[],
+    clientArr: [],
+    clientArr2: []
 
 
   },
@@ -51,6 +53,18 @@ const store = new Vuex.Store({
         console.log(state.adArr);
         
     }
+  },
+  // 同步数据更新
+ 
+      updateClientArr(state,payload) {
+          if (payload.list) {
+              state.clientArr = payload.list
+          }
+          let page=payload.page||1
+          let list = state.clientArr
+          state.clientArr2 = list.slice((page-1)*5, page*5)
+          
+      
  
   },
   // 异步数据请求，与后端API进行交互
@@ -80,8 +94,22 @@ const store = new Vuex.Store({
         fetch('/db/ad.json',function(data){
             store.commit('upadArr',data)
         })
-    }
+        },
+
+    getClient(store) {
+        //fetch方法演示
+        fetch('/db/client.json', function(data){
+          
+          let payload = {
+              page:1,
+              list: data,
+              statusNum:''
+          }
+          store.commit('updateClientArr',payload)
+
+        })
+    },
     
-  }
+}
 })
 export default store

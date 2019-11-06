@@ -9,7 +9,7 @@
            <span><span style="color:red">* </span>客户身份 : </span><el-radio v-model="radio" label="1">非会员</el-radio>
            <el-radio v-model="radio" label="2">会员</el-radio>
          
-          <br><span><span style="color:red;margin-left:30px;margin-top:20px">* </span>手机号 : </span><el-input v-model="input" placeholder="" style="width:200px;margin-top:20px;"></el-input>
+          <br><span><span style="color:red;margin-left:30px;margin-top:20px">* </span>手机号 : </span><el-input v-model="input1" placeholder="" style="width:200px;margin-top:20px;"></el-input>
           
           <br><span style="margin-left:55px;">姓名 : </span><el-input v-model="input" placeholder="" style="width:200px;margin-top:20px;"></el-input>
           
@@ -48,6 +48,7 @@
          radio: '1',
          radio1: '2',
          input: '',
+         input1: '',
          textarea: '',
         dialogTableVisible: false,
         dialogFormVisible: false,
