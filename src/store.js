@@ -29,7 +29,10 @@ const store = new Vuex.Store({
     glArr:[],
     adArr:[],
     clientArr: [],
-    clientArr2: []
+    clientArr2: [],
+    msg:'hello',
+    orderArr:[],
+    orderArr2:[]
 
 
   },
@@ -67,6 +70,14 @@ const store = new Vuex.Store({
       
  
   },
+  updateOrderArr(state,payload) {
+    if(payload.list){
+    state.orderArr = payload.list
+}
+let page=payload.page||1
+let list = state.orderArr
+state.orderArr2 = list.slice((page-1)*5,page*5)
+},
   // 异步数据请求，与后端API进行交互
   actions: {
     gettopArr(){
@@ -109,7 +120,21 @@ const store = new Vuex.Store({
 
         })
     },
+    getOrder(store){
+        fetch('/db/order.json',data=>{
+            // console.log(data)
+            let payload = {
+                page:1,
+                list:data,
+                statusNum:''
+            }
+            store.commit('updateOrderArr',payload)
+        })
+    }
     
 }
+   
+  
+
 })
 export default store
