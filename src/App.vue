@@ -1,19 +1,24 @@
 <template>
   <div id="app">
-
+  
 
      <lnav></lnav>
+
+     <login></login>
+   
   </div>
 </template>
 
 <script>
 import lnav from './components/left-nav'
+import login from "./views/login/Login"
 
 
 export default {
-  name: 'app',
+  name: 'cms',
   components: {
     lnav,
+    login
 
   }
 }
@@ -30,8 +35,9 @@ html,body{
   height: 100%;
   width: 100%;
   overflow:hidden;
+  min-width: 1100px;
 
-  background: rgb(246, 247, 249);
+  background: rgb(230, 230, 231);
 }
 
 /** 清除内外边距 **/
