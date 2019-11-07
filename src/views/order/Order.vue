@@ -56,10 +56,10 @@ export default {
 
 <style lang="scss" scoped>
 .boxx{
-  height: 77%;
+  height: 58%;
         width: 100%;
 
-  overflow-x: scroll;
+  overflow-y: scroll;
 
 
 }

@@ -55,29 +55,34 @@ const store = new Vuex.Store({
         state.adArr = payload
         console.log(state.adArr);
         
-    }
-  },
-  // 同步数据更新
+    },
+     // 同步数据更新
  
-      updateClientArr(state,payload) {
-          if (payload.list) {
-              state.clientArr = payload.list
-          }
-          let page=payload.page||1
-          let list = state.clientArr
-          state.clientArr2 = list.slice((page-1)*5, page*5)
-          
-      
- 
-  },
-  updateOrderArr(state,payload) {
-    if(payload.list){
-    state.orderArr = payload.list
+     updateClientArr(state,payload) {
+        if (payload.list) {
+            state.clientArr = payload.list
+        }
+        let page=payload.page||1
+        let list = state.clientArr
+        state.clientArr2 = list.slice((page-1)*5, page*5)
+        
+    
+    },
+    updateAdd(state,payload){
+      state.clientArr2.push(payload)
+    },
+
+
+updateOrderArr(state,payload) {
+  if(payload.list){
+  state.orderArr = payload.list
 }
 let page=payload.page||1
 let list = state.orderArr
 state.orderArr2 = list.slice((page-1)*5,page*5)
-},
+}
+  },
+ 
   // 异步数据请求，与后端API进行交互
   actions: {
     gettopArr(){
@@ -131,8 +136,8 @@ state.orderArr2 = list.slice((page-1)*5,page*5)
             store.commit('updateOrderArr',payload)
         })
     }
-    
 }
+
    
   
 

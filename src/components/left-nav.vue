@@ -72,6 +72,11 @@ methods: {
 </script>
 
 <style lang="scss" scoped>
+.el-main{
+  height: 100%;
+  overflow-y: scroll;
+
+}
 .active{
   background: rgb(255, 255, 255);
   color: rgb(26, 26, 26)!important;
