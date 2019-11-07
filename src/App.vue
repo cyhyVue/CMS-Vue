@@ -59,5 +59,11 @@ html,body{
   background: rgb(230, 230, 231);
 }
 
-
+@media (max-width: 1440px) and (min-width: 768px) {
+    html {
+        zoom: 87%; 
+        overflow: auto; 
+    }
+    @-ms-viewport { width: 1920px; }  
+}  
 </style>
