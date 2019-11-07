@@ -25,7 +25,7 @@ function fetch(api,callback){
 const store = new Vuex.Store({
   state: { //让我们来创建一个 store。用于储存数据对象
     clientArr: [],
-    clientArr2: []
+    clientArr2: [],
   },
   // 同步数据更新
   mutations: {
@@ -36,7 +36,9 @@ const store = new Vuex.Store({
           let page=payload.page||1
           let list = state.clientArr
           state.clientArr2 = list.slice((page-1)*5, page*5)
-          
+      },
+      updateAdd(state,payload){
+        state.clientArr2.push(payload)
       }
  
   },

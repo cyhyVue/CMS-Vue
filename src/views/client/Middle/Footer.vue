@@ -91,10 +91,10 @@
         @selection-change="handleSelectionChange"
       >
         <el-table-column type="selection" width="55"></el-table-column>
-        <el-table-column prop="name" label="客户" width="100">
+        <el-table-column prop="names" label="客户" width="100">
           <!-- <template slot-scope="scope">{{ scope.name }}</template> -->
         </el-table-column>
-        <el-table-column prop="name" label="权益卡" width="100"></el-table-column>
+        <el-table-column prop="city" label="地区" width="100"></el-table-column>
         <el-table-column prop="integral" label="积分" width="100" show-overflow-tooltip></el-table-column>
         <el-table-column prop="balance" label="存储余额" width="100" show-overflow-tooltip></el-table-column>
         <el-table-column prop="buy" label="购买次数" width="100" show-overflow-tooltip></el-table-column>
@@ -165,6 +165,7 @@
 
 <script>
 import { mapState, mapActions, mapMutations } from "vuex";
+// import { removeListener } from 'cluster';
 export default {
   data() {
     return {
@@ -225,7 +226,7 @@ export default {
   mounted() {
     this.getClient();
     setTimeout(() => {
-      console.log("=================>>>>", this.clientArr);
+      console.log("=================>>>>", this.clientArr2);
     }, 1000);
   },
   methods: {
@@ -260,7 +261,9 @@ export default {
       console.log(index, row);
     },
     handleDelete(index, row) {
-      console.log(index, row);
+      row=this.tableData=this.clientArr2
+      row.splice(index,1)
+        
     },
     ...mapMutations(["updateClientArr"]),
     ...mapActions(["getClient"])
