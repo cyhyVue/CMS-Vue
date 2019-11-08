@@ -9,10 +9,15 @@
         prop="src"
         label="商品"
         width="180">
-        <img src="https://img.yzcdn.cn/upload_files/2018/01/22/FnlHRufXMtUI_AbAEP0tux_nDL1T.png?imageView2/2/w/120/h/120/q/75/format/webp"
-        style="max-width: 60px;
+        <template scope="scope">
+            <img :src="scope.row.src" style="max-width: 60px;
     max-height: 60px;
     vertical-align: middle;">
+        </template>
+        <!-- <img src="https://img.yzcdn.cn/upload_files/2018/01/22/FnlHRufXMtUI_AbAEP0tux_nDL1T.png?imageView2/2/w/120/h/120/q/75/format/webp"
+        style="max-width: 60px;
+    max-height: 60px;
+    vertical-align: middle;"> -->
       </el-table-column>
       <el-table-column
         prop="current_price"
