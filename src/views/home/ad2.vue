@@ -5,49 +5,49 @@
       <el-row type="flex" justify="space-around" align="middle">
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6549825.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6546479.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6545970.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6543704.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6528143.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6544311.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6522877.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>
         <el-col :span="2">
           <div class="img-box">
-            <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+            <img src="http://static.yingyonghui.com/icon/128/6549051.png" alt srcset />
             <p>零售</p>
           </div>
         </el-col>

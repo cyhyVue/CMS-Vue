@@ -5,7 +5,7 @@
     <el-row type="flex" justify="space-around" align="middle">
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6550026.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -14,7 +14,7 @@
       </el-col>
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6549720.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -23,7 +23,7 @@
       </el-col>
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6549999.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -35,7 +35,7 @@
     <el-row type="flex" justify="space-around" align="middle">
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6548996.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -44,7 +44,7 @@
       </el-col>
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6548120.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -53,7 +53,7 @@
       </el-col>
       <el-col :span="6">
         <div class="box">
-          <img src="https://img.yzcdn.cn/v4/imgs/dashboard/mobile.png" alt srcset />
+          <img src="http://static.yingyonghui.com/icon/128/6547898.png" alt srcset />
           <div style="display: inline-block;color:#fff;">
             <p class="pt1">123456</p>
             <p class="pt2">123456</p>
@@ -73,18 +73,27 @@ export default {};
   width: 100%;
   height: 260px;
   margin-top: 20px;
+      color: #666;
+
   background: rgb(255, 255, 255);
   > .el-row {
     height: 100px;
     width: 100%;
+      
+
     > .el-col {
       height: 90%;
-      background: rgb(255, 142, 142);
+      background: rgb(255, 255, 255);
+      
     }
   }
 }
 img {
   height: 65px;
+}
+p{
+      color: #666;
+
 }
 
 .pt1,
