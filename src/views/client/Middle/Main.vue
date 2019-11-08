@@ -161,21 +161,13 @@ export default {
 <style lang="scss" scoped>
 .cliend_main_top {
     height: 92px;
-    // background: red;
     border-bottom: 2px solid #e4e4e5;
     
 }
 .cliend_main_content {
         width: 967px;
-        // height: 396px;
-        margin: 0 auto;
-        // background: orangered;
-        
+        margin: 0 auto;        
     }
-
-// .cliend_main_line {
-//     border
-// }
 
 .cliend_span1 {
     display: block;
@@ -187,6 +179,7 @@ export default {
         font-size: 14px;
     }
 }
+
 .cliend_span2 {
     display: block;
     text-align: end;
@@ -197,6 +190,7 @@ export default {
         font-size: 14px;
     }
 }
+
 .cliend_span3 {
     display: block;
     text-align: end;
@@ -207,6 +201,7 @@ export default {
         font-size: 14px;
     }
 }
+
 .cliend_span4 {
     display: block;
     text-align: end;

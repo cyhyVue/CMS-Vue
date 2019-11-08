@@ -1,5 +1,5 @@
 <template>
-  <div class="client" ref="cli">
+  <div class="client">
       <!-- <Left></Left> -->
       <Middle></Middle>
       <!-- <Right></Right> -->
@@ -15,19 +15,13 @@ export default {
         // Left,
         Middle,
         // Right
-    },
-    mounted() {
-    let h = window.screen.height;
-    console.log(h);
-    h = h * 0.8;
-    this.$refs.cli.style.height = h + "px";
-  }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
     .client {
-        
+        height: 76%;
         width: 100%;
         margin: 0;
         padding: 0;

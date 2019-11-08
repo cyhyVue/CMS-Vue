@@ -1,114 +1,45 @@
 <template>
   <div class="cliend_footer">
-    <!-- <div class="cliend_footer_top">
-          <el-row type="flex" align="middle">
-            <el-col :span="1"> <span class="cliend_footer_top_span1"></span>
-            </el-col>
-            <el-col :span="1">
-                <span>客户</span>
-            </el-col>
-            <el-col :span="4"><div class="grid-content bg-purple-dark"></div></el-col>
-            <el-col :span="2">
-                <span>权益卡</span>
-            </el-col>
-            <el-col :span="2">
-                <span>积分</span>
-            </el-col>
-            <el-col :span="2">
-                <span>储存余额</span>
-            </el-col>
-            <el-col :span="2">
-                <span>购买次数</span>
-            </el-col>
-            <el-col :span="3">
-                <span>累计消费金额</span>
-            </el-col>
-            <el-col :span="3">
-                <span>上次消费时间</span>
-            </el-col>
-            <el-col :span="4">
-                <span>操作</span>
-            </el-col>
-          </el-row>
-    </div>-->
-
     <div class="cliend_footer_new">
-      <!-- main -->
-      <!-- <div class="cliend_footer_new_box" v-for="(item,index) in cliendArr" :key="index">
-          <el-row type="flex" align="middle" >
-            <el-col :span="1"> <span class="cliend_footer_footer_span1">
-                <template>
-                <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-                    <el-checkbox v-for="city in cities" :label="city" :key="city">{{item.city}}</el-checkbox>
-                </el-checkbox-group>
-                </template>
-                </span>
-            </el-col>
-            <el-col :span="1">
-                <span><img src="v-text='item.src" alt="" ></span>
-            </el-col>
-            <el-col :span="4">
-                <p v-text='item.name'>李志</p>
-                <i v-text='item.Telephone'>123456789</i>
-            </el-col>
-            <el-col :span="2">
-                <span></span>
-            </el-col>
-            <el-col :span="2">
-                <span v-text='item.integral'>0</span>
-            </el-col>
-            <el-col :span="2">
-                <span v-text="item.balance">0.00</span>
-            </el-col>
-            <el-col :span="2">
-                <span v-text="item.buy">0</span>
-            </el-col>
-            <el-col :span="3">
-                <span v-text="item.all">0.00</span>
-            </el-col>
-            <el-col :span="3">
-                <span v-text="item.date">-</span>
-            </el-col>
-            <el-col :span="4">
-                <span></span>
-                <span></span>
-                <span></span>
-            </el-col>
-          </el-row>
-      </div>-->
-      <!-- <div class="cliend_footer_new_box" v-for="(item,index) in cliendArr" :key="index"> -->
+      <div style="margin-top: 20px"></div>
+        <el-table
+          ref="multipleTable"
+          :data="clientArr2"
+          tooltip-effect="dark"
+          style="width: 100%"
+          @selection-change="handleSelectionChange">
+            <el-table-column type="selection" width="55">              
+            </el-table-column>
 
-      <div style="margin-top: 20px">
-        <!-- <el-button @click="toggleSelection([tableData[1], tableData[2]])">切换第二、第三行的选中状态</el-button>
-        <el-button @click="toggleSelection()">取消选择</el-button>-->
-      </div>
+            <el-table-column prop="names" label="客户" width="100">     
+            </el-table-column>
 
-      <el-table
-        ref="multipleTable"
-        :data="clientArr2"
-        tooltip-effect="dark"
-        style="width: 100%"
-        @selection-change="handleSelectionChange"
-      >
-        <el-table-column type="selection" width="55"></el-table-column>
-        <el-table-column prop="names" label="客户" width="100">
-          <!-- <template slot-scope="scope">{{ scope.name }}</template> -->
-        </el-table-column>
-        <el-table-column prop="city" label="地区" width="100"></el-table-column>
-        <el-table-column prop="integral" label="积分" width="100" show-overflow-tooltip></el-table-column>
-        <el-table-column prop="balance" label="存储余额" width="100" show-overflow-tooltip></el-table-column>
-        <el-table-column prop="buy" label="购买次数" width="100" show-overflow-tooltip></el-table-column>
-        <el-table-column prop="all" label="累计消费金额" width="120" show-overflow-tooltip></el-table-column>
-        <el-table-column prop="date" label="上次消费时间" width="120" show-overflow-tooltip></el-table-column>
-        <el-table-column prop label="操作" show-overflow-tooltip>
-          <template slot-scope="scope">
-            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-            <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-          </template>
-        </el-table-column>
-      </el-table>
+            <el-table-column prop="city" label="地区" width="100">      
+            </el-table-column>
 
-      <!-- </div> -->
+            <el-table-column prop="Telephone" label="电话" width="100" show-overflow-tooltip>
+            </el-table-column>
+
+            <el-table-column prop="balance" label="存储余额" width="100" show-overflow-tooltip>
+            </el-table-column>
+
+            <el-table-column prop="buy" label="购买次数" width="100" show-overflow-tooltip>
+            </el-table-column>
+            
+            <el-table-column prop="all" label="累计消费金额" width="120" show-overflow-tooltip>
+            </el-table-column>
+
+            <el-table-column prop="date" label="上次消费时间" width="120" show-overflow-tooltip>
+            </el-table-column>
+
+            <el-table-column prop label="操作" show-overflow-tooltip>
+              <template slot-scope="scope">
+                <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑
+                </el-button>
+                <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+              </template>
+            </el-table-column>
+        </el-table>
     </div>
     <div style="width:1008px;height:55px;">
       <el-col :span="1"></el-col>
@@ -116,28 +47,31 @@
         <span style="width:25px;height:54px;line-height: 54px;
     text-align: center">当前选页</span>
       </el-col>
+
       <el-col :span="3">
-        <el-select v-model="value" placeholder="加标签">
+        <el-select v-model="value1" placeholder="加标签">
           <el-option
             v-for="item in options"
             :key="item.value"
             :label="item.label1"
-            :value="item.value1"
-          ></el-option>
+            :value="item.value1">
+          </el-option>
         </el-select>
       </el-col>
+
       <el-col :span="3">
-        <el-select v-model="value" placeholder="给积分">
+        <el-select v-model="value2" placeholder="给积分">
           <el-option
             v-for="item in options"
             :key="item.value"
             :label="item.label2"
-            :value="item.value2"
-          ></el-option>
+            :value="item.value2">
+          </el-option>
         </el-select>
       </el-col>
+      
       <el-col :span="2">
-        <el-select v-model="value" placeholder="更多">
+        <el-select v-model="value3" placeholder="更多">
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -147,6 +81,7 @@
         </el-select>
       </el-col>
     </div>
+
     <div style="width:1008px;height:40px;">
       <div class="block">
         <el-pagination
@@ -156,8 +91,8 @@
           :page-sizes="[100, 200, 300, 400]"
           :page-size="100"
           layout="total, sizes, prev, pager, next, jumper"
-          :total="400"
-        ></el-pagination>
+          :total="400">
+        </el-pagination>
       </div>
     </div>
   </div>
@@ -179,44 +114,46 @@ export default {
           value1: "选项1",
           label1: "黄金糕",
           value2: "选项1",
-          label2: "我丢",
+          label2: "我啊",
           value3: "选项1",
-          label3: "黄金糕"
+          label3: "牛了"
         },
         {
           value1: "选项2",
           label1: "双皮奶",
           value2: "选项2",
-          label2: "尼玛",
+          label2: "哎呀",
           value3: "选项2",
           label3: "黄金糕"
         },
         {
-          value1: "选项2",
+          value1: "选项3",
           label1: "哎",
-          value2: "选项2",
-          label2: "尼玛",
-          value3: "选项2",
-          label3: "黄金糕"
+          value2: "选项3",
+          label2: "哈哈",
+          value3: "选项3",
+          label3: "黄"
         },
         {
-          value1: "选项2",
+          value1: "选项4",
           label1: "男生",
-          value2: "选项2",
-          label2: "尼玛",
-          value3: "选项2",
-          label3: "黄金糕"
+          value2: "选项4",
+          label2: "不管",
+          value3: "选项4",
+          label3: "啦糕"
         },
         {
-          value1: "选项2",
+          value1: "选项5",
           label1: "不做",
-          value2: "选项2",
-          label2: "尼玛",
-          value3: "选项2",
-          label3: "黄金糕"
+          value2: "选项5",
+          label2: "年月",
+          value3: "选项5",
+          label3: "黑恶"
         }
       ],
-      value: "",
+      value1: "",
+      value2: "",
+      value3: "",
       input: ""
     };
   },
@@ -230,8 +167,7 @@ export default {
     }, 1000);
   },
   methods: {
-    handleCheckAllChange(val) {
-    },
+    handleCheckAllChange(val) {},
     handleCheckedCitiesChange(value) {
       let checkedCount = value.length;
       this.checkAll = checkedCount === this.cities.length;
@@ -261,9 +197,8 @@ export default {
       console.log(index, row);
     },
     handleDelete(index, row) {
-      row=this.tableData=this.clientArr2
-      row.splice(index,1)
-        
+      row = this.tableData = this.clientArr2;
+      row.splice(index, 1);
     },
     ...mapMutations(["updateClientArr"]),
     ...mapActions(["getClient"])
@@ -276,7 +211,7 @@ export default {
   float: right;
 }
 .cliend_footer {
-  height: 300px;
+  height: 350px;
   background: #ffffff;
 }
 .cliend_footer_top {
@@ -284,7 +219,7 @@ export default {
   background: #f7f8fa;
 }
 .cliend_footer_new {
-  height: 150px;
+  height: 250px;
   background: #ffffff;
   overflow: scroll;
 }
