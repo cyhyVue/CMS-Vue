@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="box">
     <div class="home-box">
       <topg></topg>
       <gl></gl>
@@ -28,16 +28,22 @@ export default {
     gl,
     navr,
     topg
+  },
+  //适应屏幕分辨率
+  mounted() {
+    let h = window.screen.height;
+    console.log(h);
+    h = h * 0.8;
+    this.$refs.box.style.height = h + "px";
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .home {
-  height: 640px;
   overflow: auto;
+
   .home-box {
-    height: 100%;
     width: 80%;
     float: left;
   }

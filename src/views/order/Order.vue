@@ -1,5 +1,5 @@
 <template>
-  <div class="boxx">
+  <div class="boxx" ref="boxx">
     <!-- <el-container> -->
   <!-- <el-header>Header</el-header>
   <el-container>
@@ -46,6 +46,12 @@ export default {
   },
   mounted(){
     // this.getOrder()
+   
+    let h = window.screen.height;
+    console.log(h);
+    h = h * 0.8;
+    this.$refs.boxx.style.height = h + "px";
+  
   },
   methods:{
     // ...mapActions(['getOrder'])
@@ -56,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 .boxx{
-  height: 58%;
+  // height: 80%;
         width: 100%;
 
   overflow-y: scroll;
