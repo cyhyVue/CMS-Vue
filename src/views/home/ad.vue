@@ -3,16 +3,16 @@
     <div class="ad">
       <el-col :span="8" :push="1" style="height:20%;font-size:20px;">最新推荐</el-col>
       <el-row type="flex" class="row-bg" justify="space-around" align="middle">
-        <el-col :span="5">
+        <el-col :span="5" style=" background: rgb(252, 98, 47);">
           <p class="p1">多人拼团</p>
           <p class="p2">裂变式营销玩法</p>
         </el-col>
-        <el-col :span="5">
+        <el-col :span="5" style=" background: rgb(252, 109, 109);" >
           <p class="p1">百度小程序</p>
           <p class="p2">打造新官网</p>
         </el-col>
 
-        <el-col :span="5">
+        <el-col :span="5" style=" background: rgb(0, 236, 170);">
           <p class="p1">分销市场</p>
           <p class="p2">一件上架,快速补充货源</p>
         </el-col>
@@ -68,7 +68,7 @@ export default {};
       border-radius: 10px;
       .p1 {
         font-size: 21px;
-        color: #fff;
+        color: rgb(255, 255, 255);
       }
       .p2 {
         font-size: 14px;
