@@ -43,6 +43,8 @@ export default {
   },
   mounted() {
     this.getglArr();
+    
+    
   }
 };
 </script>

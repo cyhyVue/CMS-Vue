@@ -50,6 +50,8 @@ export default {
   },
   mounted() {
     this.gettopArr(), this.gettopArr1();
+   
+    
   },
   methods: {
     ...mapActions(["gettopArr"]),

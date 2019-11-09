@@ -9,6 +9,8 @@
        <el-col :span="24"><router-link  to="/Commodity" tag="span" class="tab" activeClass="active">商品</router-link></el-col>
        <el-col :span="24"><router-link to="/Order" tag="span" class="tab" activeClass="active">订单</router-link></el-col>
        <el-col :span="24"><router-link to="/client" tag="span" class="tab" activeClass="active">客户</router-link></el-col>
+       <el-col :span="24"><router-link to="/qyk" tag="span" class="tab" activeClass="active">权益卡</router-link></el-col>
+
         
 
   </el-aside>

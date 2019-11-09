@@ -18,7 +18,7 @@
             </el-table-column>
 
             <el-table-column prop="Telephone" label="电话" width="100" show-overflow-tooltip>
-            </el-table-column>
+            </el-table-column>+
 
             <el-table-column prop="balance" label="存储余额" width="100" show-overflow-tooltip>
             </el-table-column>

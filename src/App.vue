@@ -10,15 +10,12 @@
      <lnav></lnav>
 
 </div>
-
-   
+ 
   </div>
 </template>
 
 <script>
 import lnav from './components/left-nav'
-
-
 
 export default {
   name: 'cms',
@@ -54,7 +51,7 @@ html,body{
   height: 100%;
   width: 100%;
   overflow:hidden;
-  min-width: 1100px;
+  min-width: 1440px;
 
   background: rgb(230, 230, 231);
 }

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-
 Vue.use(Vuex)
 //方法封装
 function fetch(api, callback) {
@@ -20,10 +19,9 @@ function fetch(api, callback) {
         //都会执行
     })
 }
-
-
 const store = new Vuex.Store({
-    state: { //让我们来创建一个 store。用于储存数据对象
+    state: {
+        //创建 store。用于储存数据对象
         topArr: [],
         topArr1: [],
         glArr: [],
@@ -32,12 +30,19 @@ const store = new Vuex.Store({
         clientArr2: [],
         msg: 'hello',
         orderArr: [],
-        orderArr2: []
-
-
+        orderArr2: [],
+        qykArr:[]
     },
     // 同步数据更新
     mutations: {
+        //权益卡数据更新
+        upqykArr(state,payload){
+            state.qykArr = payload
+            console.log(state.topArr);
+        },
+
+
+
         uptopArr(state, payload) {
             state.topArr = payload
             console.log(state.topArr);
@@ -56,8 +61,6 @@ const store = new Vuex.Store({
             console.log(state.adArr);
 
         },
-        // 同步数据更新
-
         updateClientArr(state, payload) {
             if (payload.list) {
                 state.clientArr = payload.list
@@ -65,14 +68,10 @@ const store = new Vuex.Store({
             let page = payload.page || 1
             let list = state.clientArr
             state.clientArr2 = list.slice((page - 1) * 5, page * 5)
-
-
         },
         updateAdd(state, payload) {
             state.clientArr2.push(payload)
         },
-
-
         updateOrderArr(state, payload) {
             if (payload.list) {
                 state.orderArr = payload.list
@@ -85,20 +84,25 @@ const store = new Vuex.Store({
 
     // 异步数据请求，与后端API进行交互
     actions: {
+        getqykArr(){
+            fetch('/db/qyk.json',function(data){
+                console.log(data);
+                store.commit('upqykArr',data)
+                
+            })
+        },
+
+
         gettopArr() {
             fetch('/db/top.json', function (data) {
                 console.log(data);
                 store.commit('uptopArr', data[0])
-
-
             })
         },
         gettopArr1() {
             fetch('/db/top.json', function (data) {
                 console.log(data);
                 store.commit('uptopArr1', data[1])
-
-
             })
         },
         getglArr() {
@@ -111,18 +115,14 @@ const store = new Vuex.Store({
                 store.commit('upadArr', data)
             })
         },
-
         getClient(store) {
-            //fetch方法演示
             fetch('/db/client.json', function (data) {
-
                 let payload = {
                     page: 1,
                     list: data,
                     statusNum: ''
                 }
                 store.commit('updateClientArr', payload)
-
             })
         },
         getOrder(store) {
@@ -137,9 +137,5 @@ const store = new Vuex.Store({
             })
         }
     }
-
-
-
-
 })
 export default store
