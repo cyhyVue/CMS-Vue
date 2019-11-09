@@ -3,7 +3,7 @@
      <!-- 列表详情如下 -->
             <el-table
             ref="multipleTable"
-                    :data="tableData"
+                    :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)"
                     tooltip-effect="dark"
                     style="width: 100%"
                     @selection-change="handleSelectionChange">
@@ -11,7 +11,7 @@
                     type="selection"
                     width="30">
                     </el-table-column>
-                    :data="tableData"
+                    :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)"
                     style="width: 100%"
                     :default-sort = "{prop: 'date', order: 'descending'}"
                     >
@@ -54,9 +54,7 @@
 
                     <el-table-column
                     prop="address"
-                    label="地址"
-                  
-                    >
+                    label="地址">
                     </el-table-column>
                     <el-table-column label="操作">
                     <!-- <template slot-scope="scope">
@@ -96,13 +94,13 @@
         </div>
         <div class="block">
                 <el-pagination
-                    @size-change="handleSizeChange"
-                    @current-change="handleCurrentChange"
+                
+                    @current-change="current_change"
                     :current-page="currentPage4"
-                    :page-sizes="[10, 20, 30, 40]"
-                    :page-size="10"
+                    :page-sizes="[5, 10, 15, 20]"
+                    :page-size="5"
                     layout="total, sizes, prev, pager, next, jumper"
-                    :total=tableData.length>
+                    :total="total">
                 </el-pagination>
         </div>
         </div>
@@ -116,7 +114,10 @@ import {tableData} from '@/assets/index'
 export default {
     data(){
         return{
-            tableData,
+                total:tableData.length,
+                tableData,
+                pagesize:5,
+                currentPage:1,
             // 分页功能
                 currentPage1: 5,
                 currentPage2: 5,
@@ -149,13 +150,26 @@ export default {
 //         this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
 //       },
 
-            // 分页功能
-             handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      },
+            created:function(){
+                this.total=this.tabledata.length;
+            },
+            current_change:function(currentPage){
+                this.currentPage=currentPage;
+            },
+
+
+
+
+
+            // !!!!!!!!!!!!!!!!分页功能
+            //  handleSizeChange(val) 
+            //     {
+            //     console.log(`每页 ${val} 条`);
+            //     },
+            //     handleCurrentChange(val) 
+            //     {
+            //     console.log(`当前页: ${val}`);
+            //     },
 
                     // 删除功能
                         deleteRow(index, rows) {
